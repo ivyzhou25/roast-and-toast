@@ -1,7 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // Root of your project
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"], // Keep your existing alias
+      "@/app/*": ["app/*"], // For Next.js app router pages
+      "@/components/*": ["components/*"], // For React components
+      "@/lib/*": ["lib/*"], // For db, utils, api helpers
+      "@/models/*": ["lib/models/*"] // For mongoose schemas
     }
-  }
+  },
+  "exclude": ["node_modules", ".next"] // Ignore build artifacts
 }
